@@ -12,7 +12,7 @@
 
     require_once 'DbHandlerSuratKeputusan.php';
 
-    $id = $_POST['id'];
+    $id = ((isset($_POST["id"])) ? $_POST["id"] : "");
 
     $db = new DbHandlerSuratKeputusan();
     $db->oneSuratKeputusan($id);

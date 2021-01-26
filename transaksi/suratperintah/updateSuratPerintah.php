@@ -12,13 +12,13 @@
 
     require_once 'DbHandlerSuratPerintah.php';
 
-    $id             = $_POST["id"];
-    $no_agenda      = $_POST["no_agenda"];
-    $no_surat       = $_POST["no_surat"];
-    $tujuan         = $_POST["tujuan"];
-    $isi            = $_POST["isi"];
-    $tgl_surat      = $_POST["tgl_surat"];	
-    $keterangan     = $_POST["keterangan"];
+    $id         = ((isset($_POST["id"])) ? $_POST["id"] : "");
+    $no_agenda  = ((isset($_POST["no_agenda"])) ? $_POST["no_agenda"] : "");
+    $no_surat   = ((isset($_POST["no_surat"])) ? $_POST["no_surat"] : "");
+    $tujuan     = ((isset($_POST["tujuan"])) ? $_POST["tujuan"] : "");
+    $isi        = ((isset($_POST["isi"])) ? $_POST["isi"] : "");
+    $tgl_surat  = ((isset($_POST["tgl_surat"])) ? $_POST["tgl_surat"] : "");
+    $keterangan = ((isset($_POST["keterangan"])) ? $_POST["keterangan"] : "");
     
     $d = new DateTime();
     $tgl_catat = $d->format('Y-m-d');

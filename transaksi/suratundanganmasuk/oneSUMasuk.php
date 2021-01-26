@@ -12,7 +12,7 @@
 
     require_once 'DbHandlerSUMasuk.php';
 
-    $id = $_POST['id'];
+    $id = ((isset($_POST["id"])) ? $_POST["id"] : "");
 
     $db = new DbHandlerSUMasuk();
     $db->oneSUMasuk($id);

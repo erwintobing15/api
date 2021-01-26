@@ -11,7 +11,8 @@
     date_default_timezone_set('Asia/Jakarta');
 
     require_once 'DbHandlerSptjm.php';
-	$id       = $_POST["id"];
+    $id = ((isset($_POST["id"])) ? $_POST["id"] : "");
+
 
     $db = new DbHandlerSptjm();
     $db->deleteSptjm($id);

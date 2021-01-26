@@ -12,15 +12,14 @@
 
     require_once 'DbHandlerSUMasuk.php';
     
-    $no_agenda      = $_POST["no_agenda"];
-    $no_surat       = $_POST["no_surat"];
-    $asal_surat     = $_POST["asal_surat"];
-    $isi            = $_POST["isi"];
-    $kode           = $_POST["kode"];
-    $tgl_surat      = $_POST["tgl_surat"];	
-    $keterangan     = $_POST["keterangan"];
-    $id_user        = $_POST["id_user"];   
-    
+    $no_agenda  = ((isset($_POST["no_agenda"])) ? $_POST["no_agenda"] : "");
+    $no_surat   = ((isset($_POST["no_surat"])) ? $_POST["no_surat"] : "");
+    $asal_surat = ((isset($_POST["asal_surat"])) ? $_POST["asal_surat"] : "");
+    $isi        = ((isset($_POST["isi"])) ? $_POST["isi"] : "");
+    $kode       = ((isset($_POST["kode"])) ? $_POST["kode"] : "");
+    $tgl_surat  = ((isset($_POST["tgl_surat"])) ? $_POST["tgl_surat"] : "");
+    $keterangan = ((isset($_POST["keterangan"])) ? $_POST["keterangan"] : "");
+    $id_user    = ((isset($_POST["id_user"])) ? $_POST["id_user"] : ""); 
 
     $d = new DateTime();
     $tgl_catat = $d->format('Y-m-d');

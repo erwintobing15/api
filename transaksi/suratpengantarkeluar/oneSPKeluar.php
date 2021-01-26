@@ -12,7 +12,7 @@
 
     require_once 'DbHandlerSPKeluar.php';
 
-    $id = $_POST['id'];
+    $id = ((isset($_POST["id"])) ? $_POST["id"] : "");
 
     $db = new DbHandlerSPKeluar();
     $db->oneSPKeluar($id);

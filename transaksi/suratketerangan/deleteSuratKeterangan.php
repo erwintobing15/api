@@ -11,7 +11,7 @@
     date_default_timezone_set('Asia/Jakarta');
 
     require_once 'DbHandlerSuratKeterangan.php';
-	$id       = $_POST["id"];
+    $id = ((isset($_POST["id"])) ? $_POST["id"] : "");
 
     $db = new DbHandlerSuratKeterangan();
     $db->deleteSuratKeterangan($id);

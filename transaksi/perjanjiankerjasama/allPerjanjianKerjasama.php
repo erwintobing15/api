@@ -12,7 +12,7 @@
 
     require_once 'DbHandlerPerjanjianKerjasama.php';
     
-	$id    = $_POST["id"];
+    $id = ((isset($_POST["id"])) ? $_POST["id"] : "");
     
     $db = new DbHandlerPerjanjianKerjasama();
     $db->allPerjanjianKerjasama($id);

@@ -12,7 +12,7 @@
 
     require_once 'DbHandlerSuratKeterangan.php';
 
-    $id = $_POST['id'];
+    $id = ((isset($_POST["id"])) ? $_POST["id"] : "");
 
     $db = new DbHandlerSuratKeterangan();
     $db->oneSuratKeterangan($id);
